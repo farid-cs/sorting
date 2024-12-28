@@ -27,11 +27,11 @@ main(void)
 	int arr[LENGTH];
 
 	fill_rand(arr, LENGTH);
-	selection_sort(arr, LENGTH);
+	bubble_sort(arr, LENGTH);
 	assert(ascends(arr, LENGTH));
 
 	fill_rand(arr, LENGTH);
-	bubble_sort(arr, LENGTH);
+	selection_sort(arr, LENGTH);
 	assert(ascends(arr, LENGTH));
 
 	return 0;
