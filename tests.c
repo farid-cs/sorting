@@ -9,7 +9,7 @@ static void
 fill_rand(int *arr, size_t len)
 {
 	for (size_t i = 0; i != len; i++)
-		arr[len] = rand();
+		arr[i] = rand();
 }
 
 static int
