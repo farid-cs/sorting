@@ -1,13 +1,13 @@
 #include "sort.h"
 
 static void
-swap(int *a, int *b)
+swap(int *left, int *right)
 {
 	int tmp;
 
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+	tmp = *left;
+	*left = *right;
+	*right = tmp;
 }
 
 void
