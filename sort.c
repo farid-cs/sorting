@@ -13,8 +13,8 @@ swap(int *left, int *right)
 void
 bubble_sort(int *arr, size_t len)
 {
-	for (size_t j = len - 1; j != 0; j--)
-		for (size_t i = 0; i != j; i++)
+	for (len--; len; len--)
+		for (size_t i = 0; i != len; i++)
 			if (arr[i] > arr[i+1])
 				swap(arr+i, arr+i+1);
 }
