@@ -1,4 +1,5 @@
 #include <assert.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 #include "sort.h"
@@ -32,6 +33,10 @@ main(void)
 
 	fill_rand(arr, LENGTH);
 	selection_sort(arr, LENGTH);
+	assert(ascends(arr, LENGTH));
+
+	fill_rand(arr, LENGTH);
+	insertion_sort(arr, LENGTH);
 	assert(ascends(arr, LENGTH));
 
 	return 0;
