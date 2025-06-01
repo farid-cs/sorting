@@ -39,5 +39,5 @@ main(void)
 	insertion_sort(arr, LENGTH);
 	assert(ascends(arr, LENGTH));
 
-	return 0;
+	return EXIT_SUCCESS;
 }
