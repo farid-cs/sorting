@@ -28,9 +28,11 @@ selection_sort(int *arr, size_t len)
 {
 	size_t min, j, i;
 
-	for (j = 0; j != len; j++) {
+	if (len < 1)
+		return;
+	for (j = 0; j != len-1; j++) {
 		min = j;
-		for (i = j; i != len; i++)
+		for (i = j+1; i != len; i++)
 			if (arr[min] > arr[i])
 				min = i;
 		swap(arr+j, arr+min);
