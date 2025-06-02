@@ -47,6 +47,6 @@ insertion_sort(int *arr, size_t len)
 	if (len < 1)
 		return;
 	for (i = 1; i != len; i++)
-		for (j = i; arr[j] < arr[j-1] && j; j--)
+		for (j = i; j && arr[j] < arr[j-1]; j--)
 			swap(arr+j, arr+j-1);
 }
