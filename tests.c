@@ -10,16 +10,20 @@
 static void
 fill_rand(int *arr, size_t len)
 {
-	for (size_t i = 0; i != len; i++)
+	size_t i;
+
+	for (i = 0; i != len; i++)
 		arr[i] = rand();
 }
 
 static bool
 ascends(int *arr, size_t len)
 {
+	size_t i;
+
 	if (len < 1)
 		return true;
-	for (size_t i = 0; i != len-1; i++)
+	for (i = 0; i != len-1; i++)
 		if (arr[i] > arr[i+1])
 			return false;
 	return true;
