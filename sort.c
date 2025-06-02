@@ -42,18 +42,11 @@ selection_sort(int *arr, size_t len)
 void
 insertion_sort(int *arr, size_t len)
 {
-	size_t i, j, k;
-	int tmp;
+	size_t i, j;
 
-	for (i = 1; i != len; i++) {
-		tmp = arr[i];
-		for (j = 0; j <= i; j++) {
-			if (tmp <= arr[j]) {
-				for (k = i; k != j; k--)
-					arr[k] = arr[k - 1];
-				arr[j] = tmp;
-				break;
-			}
-		}
-	}
+	if (len < 1)
+		return;
+	for (i = 1; i != len; i++)
+		for (j = i; arr[j] < arr[j-1] && j; j--)
+			swap(arr+j, arr+j-1);
 }
