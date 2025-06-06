@@ -46,5 +46,9 @@ main(void)
 	insertion_sort(arr, LENGTH);
 	assert(ascends(arr, LENGTH));
 
+	fill_rand(arr, LENGTH);
+	heap_sort(arr, LENGTH);
+	assert(ascends(arr, LENGTH));
+
 	return EXIT_SUCCESS;
 }
