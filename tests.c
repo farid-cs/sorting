@@ -5,8 +5,6 @@
 
 #include "sort.h"
 
-#define LENGTH 1000
-
 static void
 fill_rand(int *arr, size_t len)
 {
@@ -32,6 +30,7 @@ ascends(int *arr, size_t len)
 int
 main(void)
 {
+	const size_t LENGTH = 1000;
 	int arr[LENGTH];
 
 	fill_rand(arr, LENGTH);
